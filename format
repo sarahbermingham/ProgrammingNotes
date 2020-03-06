@@ -1,0 +1,44 @@
+format( ) method
+	- Prepares string for printing.
+	- Like a normal string but it has place holders for the data we want to specially format.
+
+	- Example:
+				>> x = hello
+				>> print("{}").format(x)
+				hello
+
+Format commands
+	- {:[align][min_width][.precision][type]}
+	- align: controls if value is printed centred, left/right justified.
+			- centre: ^
+			- left:	<
+			- right	>
+
+	- type: specifies the type of value to insert. Common types are s (for string), d (for integer) and f (for float).
+
+	- min_width: specifies the overall minimum width for the value once printed.
+
+	- Example:
+				>> print("{:.4f}").format(math.pi)
+				3.1415
+	- {:.4f} means insert a float number (type=f) and display to four decimal places (precision=4)
+
+	- Example:
+			- We want nice alignment for the out put of this loop.
+
+			>> for i in range(8,10):
+			..		print(i, "* 2 = ", i*2)
+
+			8 * 2 = 16
+			9 * 2 = 18
+			10 * 2 = 20
+
+			- Change it so all the numbers are right justified.
+
+			>> for i in range(8,10):
+			..		print("{:2d} * {:1d} = {:3d}".format(i, 2, i*2)
+		
+			 8 * 2 = 16
+			 9 * 2 = 18
+			10 * 2 = 20
+ 
